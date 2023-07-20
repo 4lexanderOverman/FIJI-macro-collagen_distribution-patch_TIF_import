@@ -20,5 +20,6 @@ REQUIREMENTS
 - FIJI (ImageJ) software installed on your system. Click https://imagej.net/software/fiji/downloads to download 
 
 FEEDBACK AND CONTRIBUTIONS
+
 This macro is currently in beta and may have limitations. We welcome feedback, bug repots and suggestions to improve the macro's performance.
 Feel free to open an issue on our GItHUb repository for any concerns or questions.
