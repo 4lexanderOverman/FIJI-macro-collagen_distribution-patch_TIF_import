@@ -1,0 +1,48 @@
+ImageTitle = getTitle();
+
+selectWindow(ImageTitle);
+run("RGB Color");
+
+run("Colour Deconvolution", "vectors=RGB");
+selectWindow(ImageTitle+"-(Colour_1)");
+setAutoThreshold("Default");
+//run("Threshold...");
+//setThreshold(0, 128);
+wait(5);
+run("Convert to Mask");
+wait(5);
+run("Measure");
+wait(5);
+
+selectWindow(ImageTitle+"-(Colour_2)");
+setAutoThreshold("Default");
+//run("Threshold...");
+//setThreshold(0, 128);
+wait(5);
+run("Convert to Mask");
+wait(5);
+run("Measure");
+wait(5);
+
+run("Read and Write Excel");
+
+selectWindow(ImageTitle+"-(Colour_3)");
+setAutoThreshold("Default");
+//run("Threshold...");
+//setThreshold(0, 128);
+wait(5);
+run("Convert to Mask");
+wait(5);
+run("Measure");
+waitForUser("Copy and Paste the Area Results in Excel")
+
+selectWindow(ImageTitle+"-(Colour_2)");
+//binary collagen image
+
+run("Median...", "radius=50");
+//exclusion of small particles
+
+run("Analyze Particles...", "size=10000-Infinity circularity=0.00-1.00 show=Nothing exclude clear add");
+//determines the ROI
+
+waitForUser("Copy and Paste the Collagen Patch Results in Excel");
