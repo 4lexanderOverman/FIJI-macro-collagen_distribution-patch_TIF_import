@@ -24,8 +24,6 @@ wait(5);
 run("Measure");
 wait(5);
 
-run("Read and Write Excel");
-
 selectWindow(ImageTitle+"-(Colour_3)");
 setAutoThreshold("Default");
 //run("Threshold...");
